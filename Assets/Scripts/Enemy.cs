@@ -25,8 +25,8 @@ public class Enemy : MonoBehaviour
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
     }
 
-    // Update is called once per frame
-    void Update()
+    // Virtual means that it can override other updates in inheritance
+    public virtual void Update()
     {
         CountDownToShoot();
     }
