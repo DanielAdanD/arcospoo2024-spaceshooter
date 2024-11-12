@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("Player Properties")]
-    public int health = 100;
+
     [Tooltip("Player movement speed value.")]
     public float moveSpeed = 10f;
     [Tooltip("Padding for Player object's half don't go outside of MainCamera.")]
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     [Range(0, 1)]
     public float shootSoundVolume = 0.5f;
 
-    public GameObject deathFX;
+
 
     public GameObject playerLaser;
     // Private Variables
@@ -72,41 +72,6 @@ public class Player : MonoBehaviour
         {
             StopCoroutine(firingCoroutine);
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
-
-        if (damageDealer)
-        {
-            TakeDamage(damageDealer.GetDamage());
-
-            damageDealer.Hit();
-        }
-
-    }
-
-    private void TakeDamage(int damage)
-    {
-        health -= damage;
-
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    private void Die()
-    {
-        // Load the GameOver Scene
-        FindObjectOfType<Level>().LoadGameOver();
-
-        deathFX.transform.position = transform.position;
-        deathFX.transform.rotation = Quaternion.identity;
-        deathFX.SetActive(true);
-
-        Destroy(gameObject);
     }
 
     private void Move()

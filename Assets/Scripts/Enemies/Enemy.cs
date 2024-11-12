@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     public float minTimeBetweenShots = 0.2f;
     public float maxTimeBetweenShots = 3f;
 
+    bool isDead = false;
+
     [Header("Audio Source")]
     public AudioSource audioSource;
     public AudioClip shootSound;
@@ -71,6 +73,17 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            Die();
+            isDead = true;
+        }
+    }
+
+    void Die()
+    {
+        if (isDead == true)
+        {
+            GetComponent<PickUpBag>().InstantiatePickup(transform.position);
+
             GameObject explosionFX = Instantiate(HitFX);
             if (explosionFX)
             {
@@ -79,6 +92,11 @@ public class Enemy : MonoBehaviour
                 explosionFX.SetActive(true);
             }
             gameObject.SetActive(false);
+            Debug.Log("And he died");
+        }
+        else
+        {
+            return;
         }
     }
 }

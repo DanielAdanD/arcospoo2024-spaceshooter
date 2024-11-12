@@ -11,6 +11,7 @@ TagManager:
   - Shredder
   - ExplosionFX
   - HitFX
+  - Shield
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Item
   - Player
   - Enemy
   - PlayerLaser
@@ -65,4 +66,7 @@ TagManager:
     locked: 0
   - name: VFX
     uniqueID: 2961659075
+    locked: 0
+  - name: Items
+    uniqueID: 3626458247
     locked: 0

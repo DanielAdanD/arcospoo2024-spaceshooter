@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4019682710987030723}
   - component: {fileID: 4019682710987030724}
   - component: {fileID: -6117276457109553497}
-  - component: {fileID: 1302104817752579613}
   - component: {fileID: 4019682710987030722}
   - component: {fileID: -1484223376872451649}
   m_Layer: 8
@@ -116,41 +115,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &1302104817752579613
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4019682710987030725}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.1}
-  serializedVersion: 2
-  m_Radius: 0.25
 --- !u!114 &4019682710987030722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +135,8 @@ MonoBehaviour:
   shootSound: {fileID: 8300000, guid: d1323897d6300eb43a099eb1f8f24f6e, type: 3}
   shootSoundVolume: 0.5
   deathFX: {fileID: 0}
-  playerLaser: {fileID: 0}
+  playerLaser: {fileID: 7564568333444180143, guid: 2503c03940aa39a4686106795ac5cfca,
+    type: 3}
 --- !u!82 &-1484223376872451649
 AudioSource:
   m_ObjectHideFlags: 0
